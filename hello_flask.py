@@ -55,6 +55,13 @@ def inputpage():
 def statuspage():
     status=request.form.get("textinput")
     return render_template("statuspage.html",status=status)
+    
+@app.route("/templateworks")
+def templateworks():
+    pythondata = ['anand','ruban','srinithin','prasanth']
+    return render_template("templateworks.html",data = pythondata)
+    
+
    
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0",debug=True)

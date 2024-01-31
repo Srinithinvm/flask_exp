@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Templates Works</title>
+</head>
+<body>
+<h3> Names :-</h3>
+
+{% for d in data %}
+	{%if d=="anand" %}
+		<p>Hii {{d}} Sir</p>
+	{%elif d=="ruban" or d=="prasanth"%}
+	<p>Hii ...</p>
+	{% endif %}
+{%endfor%}
+
+</body>
+</html>
