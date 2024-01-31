@@ -25,5 +25,11 @@ def printtime():
     print(datetime.datetime.now())
     print()
     return redirect("/resultpage")
+@app.route("/dashboard")
+def dashboard():
+    name = "Srinithin"
+    notification = 5
+    mail = 8
+    return render_template("dashboard.html", name_temp=name,notification_temp=notification,mail_temp=mail)
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
